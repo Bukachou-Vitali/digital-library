@@ -4,7 +4,7 @@ package by.electronicLibrary.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "allBooks")
+@Table(name = "all_books")
 public class Book {
 
     @Id

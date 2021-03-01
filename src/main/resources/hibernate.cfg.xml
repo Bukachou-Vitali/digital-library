@@ -35,7 +35,7 @@
         <!-- <mapping resource = "Employee.hbm.xml"/> -->
 
         <!-- List of Entity classes -->
-        <mapping class="by.electronicLibrary"/>
+        <mapping class="by.electronicLibrary.entity.Book"/>
 <!--        <mapping class="by.internetbanking.entity.Numbers"/>-->
 
     </session-factory>
