@@ -9,9 +9,9 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class AllBooksDaoHibernateMysql implements AllBooksDao {
+public class BookDaoHibernateMysql implements BookDao {
     public static void main(String[] args) {
-        AllBooksDaoHibernateMysql allBooksDaoHibernateMysql = new AllBooksDaoHibernateMysql();
+        BookDaoHibernateMysql allBooksDaoHibernateMysql = new BookDaoHibernateMysql();
 //        allBooksDaoHibernateMysql.updateBook(new Book(4, "aaaaaa", "Vitaly"));
 //        allBooksDaoHibernateMysql.deleteBookById(3);
         List<Book> allBooks = allBooksDaoHibernateMysql.getAllBooks();
@@ -43,7 +43,7 @@ public class AllBooksDaoHibernateMysql implements AllBooksDao {
             }
             e.printStackTrace();
         } finally {
-            if (session != null){
+            if (session != null) {
                 session.close();
             }
         }
@@ -78,7 +78,7 @@ public class AllBooksDaoHibernateMysql implements AllBooksDao {
             }
             e.printStackTrace();
         } finally {
-            if (session != null){
+            if (session != null) {
                 session.close();
             }
         }
@@ -101,7 +101,7 @@ public class AllBooksDaoHibernateMysql implements AllBooksDao {
             }
             e.printStackTrace();
         } finally {
-            if (session != null){
+            if (session != null) {
                 session.close();
             }
         }
@@ -118,6 +118,8 @@ public class AllBooksDaoHibernateMysql implements AllBooksDao {
             Book bookUpdate = (Book) session.get(Book.class, book.getIdBook());
             bookUpdate.setNameBook(book.getNameBook());
             bookUpdate.setBookAuthor(book.getBookAuthor());
+            bookUpdate.setYear(book.getYear());
+            bookUpdate.setDescription(book.getDescription());
             session.update(bookUpdate);
             transaction.commit();
         } catch (HibernateException e) {
@@ -126,7 +128,7 @@ public class AllBooksDaoHibernateMysql implements AllBooksDao {
             }
             e.printStackTrace();
         } finally {
-            if (session != null){
+            if (session != null) {
                 session.close();
             }
         }

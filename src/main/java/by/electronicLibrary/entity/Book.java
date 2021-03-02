@@ -13,23 +13,26 @@ public class Book {
     private int idBook;
 
     @Column(name = "name_book")
-    private String  nameBook;
+    private String nameBook;
 
     @Column(name = "book_author")
     private String bookAuthor;
 
+    @Column(name = "year")
+    private int year;
+
+    @Column(name = "description")
+    private String description;
+
     public Book() {
     }
 
-    public Book(String nameBook, String bookAuthor) {
-        this.nameBook = nameBook;
-        this.bookAuthor = bookAuthor;
-    }
-
-    public Book(int idBook, String nameBook, String bookAuthor) {
+    public Book(int idBook, String nameBook, String bookAuthor, int year, String description) {
         this.idBook = idBook;
         this.nameBook = nameBook;
         this.bookAuthor = bookAuthor;
+        this.year = year;
+        this.description = description;
     }
 
     public int getIdBook() {
@@ -54,5 +57,21 @@ public class Book {
 
     public void setBookAuthor(String bookAuthor) {
         this.bookAuthor = bookAuthor;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
