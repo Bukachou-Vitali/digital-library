@@ -3,6 +3,7 @@ package by.electronicLibrary.service;
 
 import by.electronicLibrary.dao.BookDao;
 import by.electronicLibrary.dao.BookDaoHibernateMysql;
+
 import by.electronicLibrary.entity.Book;
 
 import java.util.List;
@@ -25,8 +26,8 @@ public class BookService {
         return bookById;
     }
 
-    public void createBook(int id, String name, String author, int year, String description) {
-        Book book = new Book(id, name, author, year, description);
+    public void createBook(String name, String author, int year, String description) {
+        Book book = new Book(name, author, year, description);
         allBooksDao.createBook(book);
     }
 

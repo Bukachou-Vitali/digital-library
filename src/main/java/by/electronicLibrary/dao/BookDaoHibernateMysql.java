@@ -1,5 +1,6 @@
 package by.electronicLibrary.dao;
 
+
 import by.electronicLibrary.entity.Book;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -7,24 +8,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+
 import java.util.List;
 
 public class BookDaoHibernateMysql implements BookDao {
-    public static void main(String[] args) {
-        BookDaoHibernateMysql allBooksDaoHibernateMysql = new BookDaoHibernateMysql();
-//        allBooksDaoHibernateMysql.updateBook(new Book(4, "aaaaaa", "Vitaly"));
-//        allBooksDaoHibernateMysql.deleteBookById(3);
-        List<Book> allBooks = allBooksDaoHibernateMysql.getAllBooks();
-        System.out.println();
-//        Book bookById = allBooksDaoHibernateMysql.getBookById(1);
-//        System.out.println();
-//        Book book = new Book();
-//        book.setNameBook("Harry Potter and the Chamber of Secrets");
-//        book.setBookAuthor("J. K. Rowling");
-//        allBooksDaoHibernateMysql.createBook(book);
-//        System.out.println();
-    }
-
 
     @Override
     public List<Book> getAllBooks() {
@@ -115,9 +102,9 @@ public class BookDaoHibernateMysql implements BookDao {
             SessionFactory factory = new Configuration().configure().buildSessionFactory();
             session = factory.openSession();
             transaction = session.beginTransaction();
-            Book bookUpdate = (Book) session.get(Book.class, book.getIdBook());
-            bookUpdate.setNameBook(book.getNameBook());
-            bookUpdate.setBookAuthor(book.getBookAuthor());
+            Book bookUpdate = (Book) session.get(Book.class, book.getId());
+            bookUpdate.setName(book.getName());
+            bookUpdate.setAuthor(book.getAuthor());
             bookUpdate.setYear(book.getYear());
             bookUpdate.setDescription(book.getDescription());
             session.update(bookUpdate);

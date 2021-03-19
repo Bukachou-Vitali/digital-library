@@ -10,13 +10,13 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_book")
-    private int idBook;
+    private int id;
 
     @Column(name = "name_book")
-    private String nameBook;
+    private String name;
 
     @Column(name = "book_author")
-    private String bookAuthor;
+    private String author;
 
     @Column(name = "year")
     private int year;
@@ -27,36 +27,43 @@ public class Book {
     public Book() {
     }
 
-    public Book(int idBook, String nameBook, String bookAuthor, int year, String description) {
-        this.idBook = idBook;
-        this.nameBook = nameBook;
-        this.bookAuthor = bookAuthor;
+    public Book(String name, String author, int year, String description) {
+        this.name = name;
+        this.author = author;
         this.year = year;
         this.description = description;
     }
 
-    public int getIdBook() {
-        return idBook;
+    public Book(int idBook, String nameBook, String bookAuthor, int year, String description) {
+        this.id = idBook;
+        this.name = nameBook;
+        this.author = bookAuthor;
+        this.year = year;
+        this.description = description;
     }
 
-    public void setIdBook(int idBook) {
-        this.idBook = idBook;
+    public int getId() {
+        return id;
     }
 
-    public String getNameBook() {
-        return nameBook;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setNameBook(String nameBook) {
-        this.nameBook = nameBook;
+    public String getName() {
+        return name;
     }
 
-    public String getBookAuthor() {
-        return bookAuthor;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setBookAuthor(String bookAuthor) {
-        this.bookAuthor = bookAuthor;
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public int getYear() {
