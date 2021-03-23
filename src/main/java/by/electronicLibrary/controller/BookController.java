@@ -39,7 +39,7 @@ public class BookController {
     public String deleteBookDoPost(@RequestParam int deleteIdBook){
         BookService bookService = new BookService();
         bookService.deleteBookById(deleteIdBook);
-        return "redirect:/1";
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/book/create", method = RequestMethod.GET)
@@ -52,7 +52,7 @@ public class BookController {
     public String createBookDoPost(@RequestParam String nameBook, String authorBook, int yearBook,String descriptionBook){
         BookService bookService = new BookService();
         bookService.createBook(nameBook, authorBook, yearBook, descriptionBook);
-        return "redirect:/1";
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/book/update", method = RequestMethod.GET)
@@ -71,7 +71,7 @@ public class BookController {
     public String updateBookDoPost(@RequestParam int updateIdBook, String nameUpdateBook, String authorUpdateBook, int yearUpdateBook, String descriptionUpdateBook){
         BookService bookService = new BookService();
         bookService.updateBook(updateIdBook, nameUpdateBook, authorUpdateBook, yearUpdateBook, descriptionUpdateBook);
-        return "redirect:/1";
+        return "redirect:/";
     }
 
 

@@ -6,17 +6,17 @@
     <session-factory>
 
         <property name="hibernate.dialect">
-            org.hibernate.dialect.MySQL5Dialect
+            org.hibernate.dialect.PostgresPlusDialect
         </property>
 
         <property name="hibernate.connection.driver_class">
-            com.mysql.cj.jdbc.Driver
+            org.postgresql.Driver
         </property>
 
         <!-- Assume test is the database name -->
 
         <property name="hibernate.connection.url">
-            jdbc:mysql://127.0.0.1:3306/e-library?serverTimezone=UTC
+            jdbc:postgres://akykgbedzqejek:8747acc178b0434c4454f91e352e3262372034f05bcaab0fb375449af19dbc3e@ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/dd1mtbchtkc0vc
         </property>
 
         <property name="hibernate.connection.username">
