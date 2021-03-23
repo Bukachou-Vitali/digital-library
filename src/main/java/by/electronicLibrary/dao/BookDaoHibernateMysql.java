@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class BookDaoHibernateMysql implements BookDao {
 
@@ -51,63 +52,40 @@ public class BookDaoHibernateMysql implements BookDao {
 
     @Override
     public void createBook(Book book) {
-        Transaction transaction = null;
-        Session session = null;
-        try {
-            SessionFactory factory = new Configuration().configure().buildSessionFactory();
-            session = factory.openSession();
-            transaction = session.beginTransaction();
+        sessionCreate(session -> {
             session.save(book);
-            transaction.commit();
-        } catch (HibernateException e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
+        });
     }
 
     @Override
     public void deleteBookById(int id) {
-        Transaction transaction = null;
-        Session session = null;
-        try {
-            SessionFactory factory = new Configuration().configure().buildSessionFactory();
-            session = factory.openSession();
-            transaction = session.beginTransaction();
+        sessionCreate(session -> {
             Book bookId = session.get(Book.class, id);
             session.delete(bookId);
-            transaction.commit();
-        } catch (HibernateException e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
+        });
     }
 
     @Override
     public void updateBook(Book book) {
-        Transaction transaction = null;
-        Session session = null;
-        try {
-            SessionFactory factory = new Configuration().configure().buildSessionFactory();
-            session = factory.openSession();
-            transaction = session.beginTransaction();
+        sessionCreate(session -> {
             Book bookUpdate = (Book) session.get(Book.class, book.getId());
             bookUpdate.setName(book.getName());
             bookUpdate.setAuthor(book.getAuthor());
             bookUpdate.setYear(book.getYear());
             bookUpdate.setDescription(book.getDescription());
             session.update(bookUpdate);
+        });
+    }
+
+    public void sessionCreate(Consumer<Session> s) {
+
+        Transaction transaction = null;
+        Session session = null;
+        try {
+            SessionFactory factory = new Configuration().configure().buildSessionFactory();
+            session = factory.openSession();
+            transaction = session.beginTransaction();
+            s.accept(session);
             transaction.commit();
         } catch (HibernateException e) {
             if (transaction != null) {
