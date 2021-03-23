@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar artifacts/webapp-runner.jar --port $PORT artifacts/E-library-1.0-SNAPSHOT.war
+web: java $JAVA_OPTS -jar artifacts/webapp-runner.jar --port $PORT artifacts/*.war

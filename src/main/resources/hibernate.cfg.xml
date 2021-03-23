@@ -16,15 +16,15 @@
         <!-- Assume test is the database name -->
 
         <property name="hibernate.connection.url">
-            jdbc:postgres://akykgbedzqejek:8747acc178b0434c4454f91e352e3262372034f05bcaab0fb375449af19dbc3e@ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/dd1mtbchtkc0vc
+            jdbc:postgres://ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/dd1mtbchtkc0vc
         </property>
 
         <property name="hibernate.connection.username">
-            root
+            akykgbedzqejek
         </property>
 
         <property name="hibernate.connection.password">
-            root
+            8747acc178b0434c4454f91e352e3262372034f05bcaab0fb375449af19dbc3e
         </property>
 
         <property name="hbm2ddl.auto">
