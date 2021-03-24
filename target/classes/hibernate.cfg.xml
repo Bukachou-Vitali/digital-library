@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgresPlusDialect
+        </property>
+
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+
+        <!-- Assume test is the database name -->
+
+        <property name="hibernate.connection.url">
+            jdbc:postgres://ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/dd1mtbchtkc0vc
+        </property>
+
+        <property name="hibernate.connection.username">
+            akykgbedzqejek
+        </property>
+
+        <property name="hibernate.connection.password">
+            8747acc178b0434c4454f91e352e3262372034f05bcaab0fb375449af19dbc3e
+        </property>
+
+        <property name="hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- List of XML mapping files -->
+        <!-- <mapping resource = "Employee.hbm.xml"/> -->
+
+        <!-- List of Entity classes -->
+        <mapping class="by.electronicLibrary.entity.Book"/>
+
+
+    </session-factory>
+</hibernate-configuration>

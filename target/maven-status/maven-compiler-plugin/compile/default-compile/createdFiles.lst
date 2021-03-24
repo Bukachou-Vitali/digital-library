@@ -1,0 +1,5 @@
+by\electronicLibrary\dao\BookDaoHibernateMysql.class
+by\electronicLibrary\dao\BookDao.class
+by\electronicLibrary\controller\BookController.class
+by\electronicLibrary\service\BookService.class
+by\electronicLibrary\entity\Book.class
