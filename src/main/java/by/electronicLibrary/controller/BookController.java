@@ -2,8 +2,12 @@ package by.electronicLibrary.controller;
 
 
 import by.electronicLibrary.entity.Book;
+
+import by.electronicLibrary.repository.BookRepository;
 import by.electronicLibrary.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,27 +15,29 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class BookController {
 
+    @Autowired
+    private BookRepository bookRepository;
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView listDoGet(){
-        ModelAndView mav = new ModelAndView("allListPage");
-        List<Book> allBooks = new BookService().getAllBooks();
-        mav.addObject("bookList", allBooks);
-        return mav;
+    public String listDoGet(Map<String, Object> model){
+        Iterable<Book> allBooks = bookRepository.findAll();
+        model.put("bookList", allBooks);
+        return "list";
     }
 
     @RequestMapping(value = "/book/delete", method = RequestMethod.GET)
-    public ModelAndView deleteBookDoGet(@RequestParam int deleteIdBook){
-        ModelAndView mav = new ModelAndView("allDeletePage");
-        mav.addObject("idDelete", deleteIdBook);
+    public String deleteBookDoGet(@RequestParam int deleteIdBook, Map<String, Object> model){
+        model.put("idDelete", deleteIdBook);
         Book book = new BookService().getBookById(deleteIdBook);
-        mav.addObject("nameDelete", book.getName());
-        mav.addObject("authorDelete", book.getAuthor());
-        mav.addObject("yearDelete", book.getYear());
-        return mav;
+        model.put("nameDelete", book.getName());
+        model.put("authorDelete", book.getAuthor());
+        model.put("yearDelete", book.getYear());
+        return "deletePage";
     }
 
     @RequestMapping(value = "/book/delete", method = RequestMethod.POST)
@@ -42,9 +48,8 @@ public class BookController {
     }
 
     @RequestMapping(value = "/book/create", method = RequestMethod.GET)
-    public ModelAndView createBookDoGet(){
-        ModelAndView mav = new ModelAndView("allCreatePage");
-        return mav;
+    public String createBookDoGet(){
+        return "createPage";
     }
 
     @RequestMapping(value = "/book/create", method = RequestMethod.POST)
@@ -55,15 +60,14 @@ public class BookController {
     }
 
     @RequestMapping(value = "/book/update", method = RequestMethod.GET)
-    public ModelAndView updateBookDoGet(@RequestParam int updateIdBook){
-        ModelAndView mav = new ModelAndView("allUpdatePage");
-        mav.addObject("idUpdate", updateIdBook);
+    public String updateBookDoGet(@RequestParam int updateIdBook, Map<String, Object> model){
+        model.put("idUpdate", updateIdBook);
         Book book = new BookService().getBookById(updateIdBook);
-        mav.addObject("nameUpdateBook", book.getName());
-        mav.addObject("authorUpdateBook", book.getAuthor());
-        mav.addObject("yearUpdateBook", book.getYear());
-        mav.addObject("descriptionUpdateBook", book.getDescription());
-        return mav;
+        model.put("nameUpdateBook", book.getName());
+        model.put("authorUpdateBook", book.getAuthor());
+        model.put("yearUpdateBook", book.getYear());
+        model.put("descriptionUpdateBook", book.getDescription());
+        return "updatePage";
     }
 
     @RequestMapping(value = "/book/update", method = RequestMethod.POST)

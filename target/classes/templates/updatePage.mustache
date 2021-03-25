@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Book Update</title>
+</head>
+
+<h2>Update information:</h2>
+
+
+<body>
+
+<form action="/book/update" method="post">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>{{idUpdate}}</td>
+            <input type="hidden" name="updateIdBook" value="{{idUpdate}}"/>
+            <td><input type="text" name="nameUpdateBook" value="{{nameUpdateBook}}"/></td>
+            <td><input type="text" name="authorUpdateBook" value="{{authorUpdateBook}}"/></td>
+            <td><input type="text" name="yearUpdateBook" value="{{yearUpdateBook}}"/></td>
+            <td><input type="text" name="descriptionUpdateBook" value="{{descriptionUpdateBook}}"/></td>
+        </tr>
+    </table>
+    <button type="submit">Update</button>
+</form>
+
+<form action="/" method="get">
+    <button type="submit">Cancel</button>
+</form>
+
+
+
+</body>
+</html>

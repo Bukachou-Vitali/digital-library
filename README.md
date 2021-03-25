@@ -5,5 +5,5 @@ java -jar artifacts/webapp-runner.jar artifacts/*.war
 ```
 Type in browser
 ```
-http://localhost:8082/E-library/
+http://localhost:8080/
 ```

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library</title>
+</head>
+<body>
+    <h2> Library </h2>
+    <br/>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Description</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        {{#bookList}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{name}}</td>
+                <td>{{author}}</td>
+                <td>{{year}}</td>
+                <td>{{description}}</td>
+                <td>
+                    <form action="/book/delete" method="get">
+                        <input type="hidden" name="deleteIdBook" value="{{id}}" placeholder="enter ID"/>
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/book/update" method="get">
+                        <input type="hidden" name="updateIdBook" value="{{id}}" placeholder="enter ID"/>
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+            </tr>
+        {{/bookList}}
+    </table>
+    <form action="/book/create" method="get">
+        <button type="submit">Create New Book</button>
+    </form>
+</body>
+</html>

@@ -1,5 +1,7 @@
 C:\E-library\src\main\java\by\electronicLibrary\controller\BookController.java
 C:\E-library\src\main\java\by\electronicLibrary\dao\BookDaoHibernateMysql.java
+C:\E-library\src\main\java\by\electronicLibrary\Application.java
 C:\E-library\src\main\java\by\electronicLibrary\dao\BookDao.java
 C:\E-library\src\main\java\by\electronicLibrary\entity\Book.java
+C:\E-library\src\main\java\by\electronicLibrary\repository\BookRepository.java
 C:\E-library\src\main\java\by\electronicLibrary\service\BookService.java
