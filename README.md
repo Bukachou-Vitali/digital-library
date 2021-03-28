@@ -1,7 +1,7 @@
 #Steps to start app locally
 ```
 mvn clean install
-java -jar artifacts/webapp-runner.jar artifacts/*.war
+java java -jar target/dependency/webapp-runner.jar target/*.war
 ```
 Type in browser
 ```

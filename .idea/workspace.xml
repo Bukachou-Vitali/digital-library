@@ -5,8 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1317596a-e531-4ac6-92c6-68e7e6484290" name="Default Changelist" comment="used spring mvc; created controller, web.xml, spring-servlet.xml; deleted unneeded files, changed existing files">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_9_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digital-library" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E-library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/E-library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/WEB-INF/spring-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/E-library-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/E-library-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/electronicLibrary/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/electronicLibrary/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/electronicLibrary/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/electronicLibrary/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/electronicLibrary/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/electronicLibrary/dao/BookDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/electronicLibrary/dao/BookDaoHibernateMysql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/electronicLibrary/dao/BookDaoHibernateMysql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/electronicLibrary/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/electronicLibrary/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/electronicLibrary/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/electronicLibrary/repository/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/electronicLibrary/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/electronicLibrary/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,26 +50,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1phYTsUR6C8oVF4uetdplHAOMjn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../linker-master" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2632184" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\E-library\src\main\resources" />
+      <recent name="C:\E-library\src\main\webapp" />
+      <recent name="C:\E-library\src\main\webapp\templates" />
+      <recent name="C:\E-library\src\main\web-app" />
       <recent name="C:\E-library\src\main\webApp\WEB-INF\libraryPages" />
-      <recent name="C:\E-library\src\main\resources\templates" />
-      <recent name="C:\E-library\src\main\webApp\WEB-INF" />
-      <recent name="C:\E-library\src\main\webApp\libraryPages" />
-      <recent name="C:\E-library\src\main\webApp" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
@@ -158,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616681485042</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="commit">
+      <created>1616683373685</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616683373685</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,80 +210,85 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/digital-library10" />
+    </ignored-roots>
     <MESSAGE value="used spring mvc; created controller, web.xml, spring-servlet.xml; deleted unneeded files, changed existing files" />
     <MESSAGE value="created file readme.md, shortened the code in the BookDaoHibernateMysql.java with lambdas" />
     <MESSAGE value="changed pom.xml" />
     <MESSAGE value="fixed Procfile" />
     <MESSAGE value="fixed pom.xml" />
     <MESSAGE value="added spring boot" />
-    <option name="LAST_COMMIT_MESSAGE" value="added spring boot" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>39</line>
+          <line>36</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>44</line>
+          <line>41</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>56</line>
+          <line>53</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>69</line>
+          <line>66</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>74</line>
+          <line>71</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>29</line>
+          <line>26</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>27</line>
+          <line>24</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>34</line>
+          <line>31</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>63</line>
+          <line>60</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>58</line>
+          <line>55</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>76</line>
+          <line>73</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>51</line>
+          <line>48</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/electronicLibrary/controller/BookController.java</url>
-          <line>46</line>
+          <line>43</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
